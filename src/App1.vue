@@ -50,10 +50,9 @@
           // 创建材质
           const material = new THREE.MeshLambertMaterial({ color: 0x7777ff })
           mesh = new THREE.Mesh(geometry, material)
-          mesh.rotation.x = 0
-          mesh.rotation.y = 0
-          mesh.rotation.z = 0
-          mesh.scale.set(1, 1, 1)
+          mesh.rotation.x = -0.5 * Math.PI
+          geometry.center()
+          mesh.scale.set(1.5, 1.5, 1.5)
           scene.add(mesh)
         })
       }
